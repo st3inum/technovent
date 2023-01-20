@@ -5,6 +5,7 @@ sudo cp watermark.png /usr/share/plymouth/themes/spinner/
 sudo cp ubuntu-logo.png /usr/share/plymouth/
 sudo cp wallpaper.png /usr/share/backgrounds/ICPCLogo-on-dark-smaller.png
 
+xrandr --size 1920x1080
 sudo cp --preserve=timestamps ~/.config/monitors.xml /var/lib/gdm3/.config/
 mkdir -p /etc/skel/.config
 sudo cp --preserve=timestamps ~/.config/monitors.xml /etc/skel/.config/
