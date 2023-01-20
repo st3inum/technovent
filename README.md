@@ -10,7 +10,7 @@ mkdir -p /etc/skel/.config
 sudo cp --preserve=timestamps ~/.config/monitors.xml /etc/skel/.config/
 
 gsettings set org.gnome.desktop.interface gtk-theme "Yaru-bark"
-
+gsettings set org.gnome.desktop.background picture-options 'scaled'
 
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg > /dev/null
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
