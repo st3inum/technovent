@@ -14,6 +14,15 @@ sudo apt-get install apt-transport-https
 
 
 ```
+sudo ufw enable
+sudo ufw default deny incoming
+sudo ufw default deny outgoing
+sudo ufw allow out to 172.104.169.81
+sudo ufw allow out to 172.104.160.52
+sudo ufw allow out to 8.8.8.8
+sudo ufw allow out to 2001:4860:4860::8888
+sudo ufw reload
+# sudo ufw reset
 xrandr --size 1920x1080
 sudo cp --preserve=timestamps ~/.config/monitors.xml /var/lib/gdm3/.config/
 mkdir -p /etc/skel/.config
