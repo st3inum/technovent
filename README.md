@@ -14,6 +14,12 @@ sudo apt-get install apt-transport-https
 
 
 ```
+sudo iptables -F
+sudo iptables -X
+sudo iptables -Z
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P OUTPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
 sudo ufw enable
 sudo ufw default deny incoming
 sudo ufw default deny outgoing
