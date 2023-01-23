@@ -37,3 +37,15 @@ sudo cp --preserve=timestamps ~/.config/monitors.xml /etc/skel/.config/
 gsettings set org.gnome.desktop.interface gtk-theme "Yaru-bark"
 gsettings set org.gnome.desktop.background picture-options 'scaled'
 ```
+
+
+```
+sudo iptables --policy INPUT DROP
+sudo iptables --policy FORWARD DROP
+sudo iptables -A INPUT -i lo -j ACCEPT
+sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+sudo iptables -A INPUT -s 172.104.169.81 -j ACCEPT
+sudo iptables -A INPUT -s 172.104.160.52 -j ACCEPT
+sudo iptables -A INPUT -s 8.8.8.8 -j ACCEPT
+sudo service iptables save
+```
