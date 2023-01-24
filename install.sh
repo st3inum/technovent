@@ -1,3 +1,6 @@
+sudo adduser mock
+sudo adduser main
+
 sudo iptables -F
 sudo iptables -X
 sudo iptables -Z
