@@ -1,6 +1,6 @@
 sudo adduser mock
 sudo adduser main
-
+sudo apt install iptables-persistent
 sudo iptables -F
 sudo iptables -X
 sudo iptables -Z
