@@ -1,6 +1,6 @@
 sudo adduser mock
 sudo adduser main
-sudo apt install iptables-persistent
+# sudo apt install iptables-persistent
 sudo iptables -F
 sudo iptables -X
 sudo iptables -Z
@@ -10,8 +10,8 @@ sudo iptables -A INPUT -i lo -j ACCEPT
 sudo iptables -A INPUT -s 172.104.169.81 -j ACCEPT
 sudo iptables -A INPUT -s 172.104.160.52 -j ACCEPT
 sudo iptables -A INPUT -s 8.8.8.8 -j ACCEPT
-sudo cp /etc/iptables/rules.v4 /etc/iptables.rules
-sudo sh -c "iptables-save > /etc/iptables/rules.v4"
+# sudo cp /etc/iptables/rules.v4 /etc/iptables.rules
+# sudo sh -c "iptables-save > /etc/iptables/rules.v4"
 sudo sh -c "iptables-save > /etc/iptables.rules"
 
 sudo echo "gsettings set org.gnome.desktop.interface gtk-theme \"Yaru-bark\"" >> /etc/profile
